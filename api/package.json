@@ -18,14 +18,15 @@
     "ioredis": "^4.27.7",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
     "pg": "^8.7.1",
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
-    "supertest-session": "^4.1.0",
-    "mocha": "^9.0.3",
     "chai": "^4.3.4",
+    "mocha": "^9.0.3",
     "nodemon": "^2.0.12",
-    "supertest": "^6.1.4"
+    "supertest": "^6.1.4",
+    "supertest-session": "^4.1.0"
   }
 }
