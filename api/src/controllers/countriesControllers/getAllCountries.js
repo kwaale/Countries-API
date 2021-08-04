@@ -1,9 +1,15 @@
+const { Country } = require('../../db');
 
-// BASE_URL + "/countries";
+/*
+Ruta GET BASE_URL + "/countries";
+Envia todos los paises de la DB
+*/
 const getAllCountries = async (req, res, next) => {
-    console.log('ruta getAllCountries');
-    
-
-}
+    try {
+        return res.json(await Country.findAll());
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 module.exports = getAllCountries;
