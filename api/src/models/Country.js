@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     callingCodes: {
-      type: DataTypes.STRING
+      type: DataTypes.ARRAY(DataTypes.STRING)
     },
     capital: {
       type: DataTypes.STRING
@@ -26,10 +26,10 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING
     },
     population: {
-      type: DataTypes.INTEGER
+      type: DataTypes.FLOAT
     },
     area: {
-      type: DataTypes.INTEGER
+      type: DataTypes.FLOAT
     },
     timezones: {
       type: DataTypes.ARRAY(DataTypes.STRING)
