@@ -5,18 +5,15 @@ import { getAllCountries } from "../../store/actions"
 
 const Countries = (props) => {
     const dispatch = useDispatch();
-    const {countries} = useSelector(state => state.countries);
-
+    const state = useSelector(state => state.countriesState);
+    console.log("Countries", state);
     useEffect(() => {
         dispatch(getAllCountries());
-        console.log('countries', countries);
-    },[])
-
-return(
-    <div className="Countries">
-        <h1>Countries</h1>
-        <Country/>
-    </div>
-)
-    }
+    }, [])
+    return (
+        <div className="Countries">
+            {state.countries.map(country => <Country key={country.id} country={country}/>)}
+        </div>
+    )
+}
 export default Countries;
