@@ -1,10 +1,12 @@
 import { GET_ALL_COUNTRIES } from '../actions';
 
+
 const initial_state = {
     countries: [],
 }
 
-function countries(state = initial_state, action) {
+export default function countriesActions(state = initial_state, action) {
+    console.log('Action in countries reducer:' + action.type);
     switch (action.type) {
         case GET_ALL_COUNTRIES:
             return {
