@@ -1,7 +1,15 @@
-const Country = () => {
+import './Country.scss';
+
+const Country = ({country}) => {
+    console.log(country)
     return (
         <div className="country">
-            Country
+            <h2>{country.name}</h2>
+            <img className="flag" src={country.flag} alt={country.name} />
+            <p>Capital: {country.capital}</p>
+            <p>Population: {country.population}</p>
+            <p>Area: {country.area}</p>
+            <p>Continent: {country.region}</p>
         </div>
     );
 };

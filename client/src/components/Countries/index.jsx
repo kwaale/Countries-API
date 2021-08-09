@@ -1,7 +1,8 @@
 import Country from "./Country";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getAllCountries } from "../../store/actions"
+import { getAllCountries } from "../../store/actions";
+import './Countries.scss';
 
 const Countries = (props) => {
     const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Countries = (props) => {
     }, [])
     return (
         <div className="Countries">
-            {state.countries.map(country => <Country key={country.id} country={country}/>)}
+            {state.countriesLoaded.map(country => <Country key={country.id} country={country}/>)}
         </div>
     )
 }
