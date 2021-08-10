@@ -1,6 +1,6 @@
-import './Country.scss';
+import './CountryDetail.scss';
 
-const Country = ({ country }) => {
+const CountryDetail = ({ country }) => {
     console.log(country)
     return (
         <div className="country">
@@ -13,4 +13,4 @@ const Country = ({ country }) => {
         </div>
     );
 };
-export default Country;
+export default CountryDetail;
